@@ -1,0 +1,4 @@
+.metadata/
+**/app/build/
+.cproject
+.project
