@@ -1,0 +1,282 @@
+{
+  "type": "Object Detection",
+  "guid": "b5c77029-4055-46ca-97ca-e0609ea1b55d",
+  "data": {
+    "selectedAutoLabelModels": [
+      {
+        "name": "MNISTmodel_2025-11-16_09-45-35",
+        "minConfidence": 0
+      }
+    ],
+    "selectedRunModel": "",
+    "annotationMode": 0,
+    "fusionType": "Single Image",
+    "validationSettings": {
+      "useValidationSplit": true,
+      "validationSplit": 20
+    },
+    "testSettings": {
+      "testImagePercentage": 0,
+      "validationImagePercentage": 100,
+      "validationImageSplitPercentage": 0
+    },
+    "labels": [
+      {
+        "name": "9_0",
+        "id": 1,
+        "groupId": 1,
+        "color": 4279927278,
+        "excludeFromTraining": false
+      },
+      {
+        "name": "7_8",
+        "id": 2,
+        "groupId": 1,
+        "color": 4280006577,
+        "excludeFromTraining": false
+      },
+      {
+        "name": "5_6",
+        "id": 3,
+        "groupId": 1,
+        "color": 4285616700,
+        "excludeFromTraining": false
+      },
+      {
+        "name": "4_5",
+        "id": 4,
+        "groupId": 1,
+        "color": 4289414465,
+        "excludeFromTraining": false
+      },
+      {
+        "name": "3_4",
+        "id": 5,
+        "groupId": 1,
+        "color": 4288897772,
+        "excludeFromTraining": false
+      },
+      {
+        "name": "2_3",
+        "id": 6,
+        "groupId": 1,
+        "color": 4283879011,
+        "excludeFromTraining": false
+      },
+      {
+        "name": "8_9",
+        "id": 7,
+        "groupId": 1,
+        "color": 4283758728,
+        "excludeFromTraining": false
+      },
+      {
+        "name": "1_2",
+        "id": 8,
+        "groupId": 1,
+        "color": 4282872828,
+        "excludeFromTraining": false
+      },
+      {
+        "name": "0_1",
+        "id": 9,
+        "groupId": 1,
+        "color": 4294128568,
+        "excludeFromTraining": false
+      },
+      {
+        "name": "6_7",
+        "id": 10,
+        "groupId": 1,
+        "color": 4288132185,
+        "excludeFromTraining": false
+      }
+    ],
+    "groups": [
+      {
+        "name": "Group 1",
+        "id": 1
+      }
+    ],
+    "preFiltersBegin": [
+      {
+        "id": "initialResize",
+        "isEnabled": true,
+        "settings": {
+          "resizeStrategy": "Resize",
+          "width": 128,
+          "height": 128
+        }
+      },
+      {
+        "id": "resize",
+        "isEnabled": true,
+        "settings": {
+          "resizePercentage": 100
+        }
+      }
+    ],
+    "preFiltersBeforeAugmentation": [
+      {
+        "id": "inverse",
+        "isEnabled": true,
+        "settings": {
+          "enableInvert": true
+        }
+      }
+    ],
+    "preFiltersAfterAugmentation": [
+      {
+        "id": "normalize",
+        "isEnabled": true,
+        "settings": {
+          "enableNormalize": true
+        }
+      },
+      {
+        "id": "threshold",
+        "isEnabled": true,
+        "settings": {
+          "type": "Binary",
+          "channel": "Average",
+          "applyForAllChannels": false,
+          "twoThresholds": false,
+          "threshold": 160
+        }
+      }
+    ],
+    "preFiltersEnd": [
+      {
+        "id": "channel",
+        "isEnabled": true,
+        "settings": {
+          "disableRChannel": false,
+          "disableGChannel": true,
+          "disableBChannel": true
+        }
+      }
+    ],
+    "augmentationsStatic": [
+      {
+        "id": "move",
+        "isEnabled": true,
+        "settings": {
+          "fromX": 0,
+          "fromY": 0,
+          "toX": 20,
+          "toY": 20
+        }
+      },
+      {
+        "id": "rotate",
+        "isEnabled": true,
+        "settings": {
+          "fromAngle": 20,
+          "toAngle": 0
+        }
+      },
+      {
+        "id": "flip",
+        "isEnabled": false,
+        "settings": {
+          "horizontal": false,
+          "vertical": false
+        }
+      },
+      {
+        "id": "resize",
+        "isEnabled": true,
+        "settings": {
+          "fromX": 100,
+          "fromY": 100,
+          "toX": 40,
+          "toY": 125
+        }
+      }
+    ],
+    "augmentationsDynamic": [
+      {
+        "id": "color",
+        "isEnabled": true,
+        "settings": {
+          "fromBrightness": -30,
+          "fromContrast": 80,
+          "fromSaturation": 100,
+          "fromHue": 0,
+          "fromGamma": 100,
+          "toBrightness": 30,
+          "toContrast": 120,
+          "toSaturation": 100,
+          "toHue": 0,
+          "toGamma": 100
+        }
+      },
+      {
+        "id": "frequency",
+        "isEnabled": true,
+        "settings": {
+          "fromEnableLowPass": true,
+          "fromLowPassSigma": 0,
+          "toEnableLowPass": true,
+          "toLowPassSigma": 1.5,
+          "enableLowPassKernel": false,
+          "toKernelSize": 5
+        }
+      },
+      {
+        "id": "noise",
+        "isEnabled": true,
+        "settings": {
+          "fromNoise": 0,
+          "toNoise": 10
+        }
+      }
+    ],
+    "modelOutputSettings": {
+      "classificationType": "One Class per Image",
+      "predictionType": "Size, Position and Class of Objects",
+      "coordinatePrecision": 25,
+      "allowPositionOverlap": false,
+      "sizePrecision": 25,
+      "prioritizePrecision": 50,
+      "minimumFps": 60,
+      "maximumMemoryUsage": 90,
+      "maximumDspUsage": 25,
+      "maximumFrequency": 50
+    },
+    "modelInputSettings": {
+      "estimatedSurroundingMinWidth": 25,
+      "estimatedSurroundingMinHeight": 25,
+      "estimatedSurroundingMaxWidth": 75,
+      "estimatedSurroundingMaxHeight": 75,
+      "detectSimplicity": 90,
+      "sameClassDifference": 40,
+      "backgroundDifference": 0,
+      "estimatedMinWidth": 25,
+      "estimatedMinHeight": 25,
+      "estimatedAvgWidth": 50,
+      "estimatedAvgHeight": 50,
+      "estimatedMaxWidth": 70,
+      "estimatedMaxHeight": 70,
+      "maxFeatures": 4,
+      "avgFeatures": 2
+    },
+    "hardwareSettings": {
+      "advancedSettings": false,
+      "configurationName": "AGILEX_5, A5ED065B",
+      "hardwareType": "FPGA",
+      "prioritizeSpeedOptimization": false,
+      "computeCapability": 1015200,
+      "computeCapabilityUnit": "MOPS",
+      "dspBlocks": 10152,
+      "dspGroups": 1,
+      "prioritizeMemoryOptimization": true,
+      "memoryLimit": 512,
+      "memoryLimitUnit": "KB",
+      "optimizeForParallelExecution": true,
+      "quantizedCalculations": true,
+      "bitsPerValue": 8,
+      "installedHardware": "Custom"
+    }
+  }
+}

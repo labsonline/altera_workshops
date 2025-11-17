@@ -11,46 +11,21 @@ input         USER_BTN,
 input         UART_RXD,
 output        UART_TXD,
 
-// DIP switches
-//input [1:0]   DIP_SW,
-
 // LEDs
 output        RLED, GLED, BLED,
 output reg    LED1,
 
-// Arduino MKR
-//inout [14:0]  D,
-//inout         D11_R, D12_R,
-//inout [6:0]   AIN,
-//output        AIN0,
-//inout         AREF,
-//output        AREF,
-
-// Accelerometer
-//input         INT1, INT2,			// Need internal pull-up?
-//inout         I2C_SCL, I2C_SDA,
 // CRUVI pins (MIPI)
-//input         C_B5P,  C_B1P, C_B0P,
 input         MIPI_D1P, MIPI_D0P, MIPI_CLKP,
 input         MIPI_D1N, MIPI_D0N, MIPI_CLKN,
-//output        C_A5P, C_A4P, C_A3P, C_A2P, C_A1P, C_A0P,
 input         MIPI_RZQ,
 input         MIPI_REFCLK, 
 inout           CAMERA_SDA, CAMERA_SCL,
 output          CAMERA_EN,
-//inout         C_HSMIO,
-//inout         C_HSO, C_HSRST, C_HSI,
-//inout         C_REFCLK,
-
-// HyperRAM
-//inout [7:0]   HR_DQ,
-//output        HR_CLK,
-//output        HR_RWDS, HR_HRESETn, HR_CSn,
 
 // Global Signals
-output        VSEL_1V3,		// VADJ selector between 1.2V and 1.3V
-input         CLK_25M_C
-
+// output        VSEL_1V3,		// VADJ selector between 1.2V and 1.3V
+input         CLK_50M_C
 
 );
 
@@ -71,13 +46,13 @@ assign   CAMERA_SDA    = camera_i2c_sda_oe ? 1'b0 : 1'bz;
 assign   camera_i2c_sda_in     = CAMERA_SDA;
 
 // Select 1.3V for HSIO
-assign VSEL_1V3 = 1'b1;
+// assign VSEL_1V3 = 1'b1;
 
 
 /******************************************************************************/
 
    niosv_system niosv_sys (
-      .clk_25m_clk     (CLK_25M_C),          //   input,  width = 1,       clk.clk
+      .clk_50m_clk     (CLK_50M_C),          //   input,  width = 1,       clk.clk
       .camera_i2c_sda_in (camera_i2c_sda_in), //   input,  width = 1, niosv_i2c.sda_in
       .camera_i2c_scl_in (camera_i2c_scl_in), //   input,  width = 1,          .scl_in
       .camera_i2c_sda_oe (camera_i2c_sda_oe), //  output,  width = 1,          .sda_oe
@@ -96,9 +71,7 @@ assign VSEL_1V3 = 1'b1;
       .sysclk_out_clk            (clk_150MHz)             //  output,  width = 1,       sysclk_out.clk
 	);
 
-
 /******************************************************************************/
-
 
 // LED counter 
 always @ (posedge clk_150MHz) begin
@@ -111,6 +84,5 @@ always @ (posedge clk_150MHz) begin
 		LED1 <= LED1;
 	 end
 end
-
 
 endmodule

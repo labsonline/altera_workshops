@@ -1,0 +1,45 @@
+# Copyright (C) 2025  Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Altera and sold by Altera or its authorized distributors.  Please
+# refer to the Altera Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+
+# Quartus Prime Version 25.3.0 Build 109 09/24/2025 SC Pro Edition
+# File: /home/schubert/Downloads/altera_workshops/axc3000/OneWare_AI_lab/Qpro/AXC3000_MIPI.csv
+# Generated on: Mon Nov 17 17:01:23 2025
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,I/O Standard,Weak Pull-Up Resistor,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+USER_BTN,Input,PIN_C8,6D,3.3-V LVCMOS,on,,,,,
+UART_RXD,Input,PIN_BR19,6E,3.3-V LVCMOS,,,,,,
+UART_TXD,Output,PIN_CJ1,6F,3.3-V LVCMOS,,,,,,
+RLED,Output,PIN_DF35,2A_T,1.1-V,,,,,,
+GLED,Output,PIN_DJ32,2A_T,1.1-V,,,,,,
+BLED,Output,PIN_DN22,2A_T,1.1-V,,,,,,
+LED1,Output,PIN_DP23,2A_T,1.1-V,,,,,,
+MIPI_D1P,Input,PIN_DP38,2A_T,DPHY,,,,,,
+MIPI_D0P,Input,PIN_DP36,2A_T,DPHY,,,,,,
+MIPI_CLKP,Input,PIN_DP33,2A_T,DPHY,,,,,,
+MIPI_D1N,Input,PIN_DN38,2A_T,DPHY,,,,,,
+MIPI_D0N,Input,PIN_DN33,2A_T,DPHY,,,,,,
+MIPI_CLKN,Input,PIN_DN30,2A_T,DPHY,,,,,,
+MIPI_RZQ,Input,PIN_DD35,2A_T,1.1-V,,,,,,
+MIPI_REFCLK,Input,PIN_BF23,6E,3.3-V LVCMOS,,,,,,
+CAMERA_SDA,Bidir,PIN_BP1,6F,3.3-V LVCMOS,,,,,,
+CAMERA_SCL,Bidir,PIN_BP2,6F,3.3-V LVCMOS,,,,,,
+CAMERA_EN,Output,PIN_BR8,6F,3.3-V LVCMOS,,,,,,
+CLK_50M_C,Input,PIN_V16,6C,3.3-V LVCMOS,,,,,,
+altera_reserved_tck,Input,,,,,,,,,
+altera_reserved_tdi,Input,,,,,,,,,
+altera_reserved_tdo,Output,,,,,,,,,
+altera_reserved_tms,Input,,,,,,,,,
