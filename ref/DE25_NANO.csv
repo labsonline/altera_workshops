@@ -1,0 +1,51 @@
+# Copyright (C) 2025  Altera Corporation. All rights reserved.
+# Your use of Altera Corporation's design tools, logic functions 
+# and other software and tools, and any partner logic 
+# functions, and any output files from any of the foregoing 
+# (including device programming or simulation files), and any 
+# associated documentation or information are expressly subject 
+# to the terms and conditions of the Altera Program License 
+# Subscription Agreement, the Altera Quartus Prime License Agreement,
+# the Altera IP License Agreement, or other applicable license
+# agreement, including, without limitation, that your use is for
+# the sole purpose of programming logic devices manufactured by
+# Altera and sold by Altera or its authorized distributors.  Please
+# refer to the Altera Software License Subscription Agreements 
+# on the Quartus Prime software download page.
+
+# Quartus Prime Version 25.3.0 Build 109 09/24/2025 SC Pro Edition
+# File: /home/schubert/Downloads/ref/DE25_NANO.csv
+# Generated on: Mon Nov 17 20:20:22 2025
+
+# Note: The column header names should not be changed if you wish to import this .csv file into the Quartus Prime software.
+
+To,Direction,Location,I/O Bank,I/O Standard,Weak Pull-Up Resistor,Reserved,Current Strength,Slew Rate,Differential Pair,Strict Preservation
+CLOCK1_50,Input,PIN_V16,6C,3.3-V LVCMOS,,,,,,
+LED[7],Output,PIN_DP30,2A_T,1.1-V,,,,,,
+CAM_GPIO,Bidir,PIN_BR8,6F,3.3-V LVCMOS,,,,,,
+LED[0],Output,PIN_DF35,2A_T,1.1-V,,,,,,
+CAM_D_n[1],Input,PIN_DN38,2A_T,DPHY,,,,,,
+CLOCK3_50,Input,PIN_DJ35,2A_T,1.1-V,,,,,,
+LED[5],Output,PIN_DP25,2A_T,1.1-V,,,,,,
+CAM_I2C_SDA,Bidir,PIN_BP1,6F,3.3-V LVCMOS,,,,,,
+SW[3],Input,PIN_DF27,2A_T,1.1-V,,,,,,
+CAM_D_p[1],Input,PIN_DP38,2A_T,DPHY,,,,,,
+CAM_D_p[0],Input,PIN_DP36,2A_T,DPHY,,,,,,
+KEY[1],Input,PIN_C11,6D,3.3-V LVCMOS,,,,,,
+FPGA_UART_TX,Output,PIN_H14,6C,3.3-V LVCMOS,,,,,,
+LED[3],Output,PIN_DP23,2A_T,1.1-V,,,,,,
+SW[1],Input,PIN_DD24,2A_T,1.1-V,,,,,,
+LED[6],Output,PIN_DJ27,2A_T,1.1-V,,,,,,
+LED[4],Output,PIN_DN25,2A_T,1.1-V,,,,,,
+LED[2],Output,PIN_DN22,2A_T,1.1-V,,,,,,
+LED[1],Output,PIN_DJ32,2A_T,1.1-V,,,,,,
+CAM_CLK_p,Input,PIN_DP33,2A_T,DPHY,,,,,,
+CAM_D_n[0],Input,PIN_DN33,2A_T,DPHY,,,,,,
+CLOCK2_50,Input,PIN_BF23,6E,3.3-V LVCMOS,,,,,,
+CAM_I2C_SCL,Bidir,PIN_BP2,6F,3.3-V LVCMOS,,,,,,
+SW[2],Input,PIN_DD27,2A_T,1.1-V,,,,,,
+SW[0],Input,PIN_DK24,2A_T,1.1-V,,,,,,
+KEY[0],Input,PIN_C8,6D,3.3-V LVCMOS,,,,,,
+FPGA_UART_RX,Input,PIN_BR19,6E,3.3-V LVCMOS,,,,,,
+CAM_RZQ1,Input,PIN_DD35,2A_T,1.1-V,,,,,,
+CAM_CLK_n,Input,PIN_DN30,2A_T,DPHY,,,,,,
