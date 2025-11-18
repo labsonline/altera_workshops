@@ -21,7 +21,7 @@ class Net(nn.Module):
         x = F.relu(self.fc1(x))
         x = F.dropout(x, training=self.training)
         x = self.fc2(x)
-        return F.softmax(x)
+        return F.softmax(x, dim=1)
 
 
 PATH = 'model.pth'
@@ -39,7 +39,7 @@ dummy_input = torch.randn(1, 1, 28, 28)
 onnx_model_path = "Digit-classifier.onnx"
 torch.onnx.export(model, dummy_input, onnx_model_path)
 #torch.onnx.export(model, dummy_input, onnx_model_path, verbose=True)
-summary(model, (1,1,28,28), batch_size=1, device='cpu')
+summary(model, (1, 28, 28), batch_size=1, device='cpu')
 
 print(model)
 print(f"Input shape: {dummy_input.shape}")
@@ -51,4 +51,3 @@ print(f"Output Shape: {output_shape}")
 
 
 #help(summary)
-

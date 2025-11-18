@@ -1,0 +1,7 @@
+set_parameter_value C_CSR_AXI_ADDR_WIDTH 11
+set_parameter_value C_CSR_AXI_DATA_WIDTH 32
+set_parameter_value C_DDR_AXI_BURST_WIDTH 4
+set_parameter_value STREAMING_INPUT_ENABLED 1
+set_parameter_value STREAMING_OUTPUT_ENABLED 1
+set_parameter_value AXI_ISTREAM_DATA_WIDTH 128
+set_parameter_value AXI_OSTREAM_DATA_WIDTH 128
