@@ -5,8 +5,8 @@
 module axc3000_mipi_top (
 
 // Global Signals
-output        VSEL_1V3,		// VADJ selector between 1.2V and 1.3V
-input         CLK_25M_C,
+// output        VSEL_1V3,		// VADJ selector between 1.2V and 1.3V
+input         CLK_50M_C,
 
 // Push Button
 input         USER_BTN,
@@ -40,14 +40,14 @@ assign   camera_i2c_sda_in     = SMB_SDA;
 
 
 // Select 1.3V for HSIO
-assign VSEL_1V3 = 1'b1;
+// assign VSEL_1V3 = 1'b1;
 
 
 
 /******************************************************************************/
 
     top_system mipi_top (
-        .clk25mhz_clk              (CLK_25M_C),  
+        .clk50mhz_clk              (CLK_50M_C),  
         .mipi_dphy_rzq_rzq         (MIPI_RZQ),  
         .mipi_dphy_refclk_clk      (MIPI_REFCLK),  
         .mipi_csi2_io_dphy_link_dp ({MIPI_D1P, MIPI_D0P}), 
@@ -62,7 +62,7 @@ assign VSEL_1V3 = 1'b1;
         .dbg_uart_txd              (DBG_TX),
         .led_export                ({RLED,GLED,BLED}), 
         .camera_en_export          (CAMERA_EN), 
-        .pb_export                 (USER_BTN) 
+        .btn_export                (USER_BTN) 
 	);
 
 /******************************************************************************/
